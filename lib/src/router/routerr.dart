@@ -19,6 +19,8 @@ import 'package:simple/src/view/screen/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 
+import '../view/screen/dash_board_screen.dart';
+
 class Routerr {
   static RouteFactory onGenerateRouter = (RouteSettings settings) {
     switch (settings.name) {
@@ -29,6 +31,8 @@ class Routerr {
         ));
       case CheckoutScreens:
         return _generateMaterialRoute(CheckoutScreen());
+        case DashBoardScreens:
+        return _generateMaterialRoute(DashBoardScreen());
       case ChoiceAddressScreens:
         return _generateMaterialRoute(ChoiceAddressScreen());
       case AddAddressScreens:

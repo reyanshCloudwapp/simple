@@ -1,5 +1,6 @@
 const String DetailProductScreens = "DetailProductScreens";
 const String CheckoutScreens = "CheckoutScreens";
+const String DashBoardScreens = "DashBoardScreens";
 const String ChoiceAddressScreens = "ChoiceAddressScreens";
 const String AddAddressScreens = "AddAddressScreens";
 const String OrderSuccessScreens = "OrderSuccessScreens";

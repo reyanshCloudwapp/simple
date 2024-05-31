@@ -258,7 +258,8 @@ class CartScroll extends StatelessWidget {
                   ),
                   onPressed: () {
                     cartViewModel.checkOutCart();
-                    // Navigator.pushNamed(context, OrderSuccessScreens),
+                    // Navigator.pushNamed(context, OrderSuccessScreens);
+                    Navigator.pushNamed(context, CheckoutScreens);
                   },
                   child: Text(
                     'Checkout',

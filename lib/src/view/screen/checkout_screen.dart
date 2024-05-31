@@ -4,6 +4,7 @@ import 'package:simple/src/router/router_path.dart';
 import 'package:flutter/material.dart';
 
 class CheckoutScreen extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -62,7 +63,7 @@ class CheckoutScreen extends StatelessWidget {
                       ),
                       Spacer(),
                       InkWell(
-                        onTap: (){
+                        onTap: () {
                           Navigator.pushNamed(context, ChoiceAddressScreens);
                         },
                         child: Text(
@@ -143,7 +144,7 @@ class CheckoutScreen extends StatelessWidget {
                 ),
                 Spacer(),
                 Text(
-                  "11VND",
+                  "11\$",
                   style: AppFont.semiBold.copyWith(
                     fontWeight: FontWeight.bold,
                     fontSize: 15,
@@ -165,7 +166,7 @@ class CheckoutScreen extends StatelessWidget {
                 ),
                 Spacer(),
                 Text(
-                  "11VND",
+                  "11\$",
                   style: AppFont.semiBold.copyWith(
                     fontWeight: FontWeight.bold,
                     fontSize: 15,
@@ -203,15 +204,18 @@ class CheckoutScreen extends StatelessWidget {
               height: 49,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                    backgroundColor: AppColors.primaryColorRed,
+                  backgroundColor: AppColors.primaryColorRed,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(40.0),
                   ),
-                    textStyle: AppFont.medium.copyWith(
-                      fontSize: 15,
-                      fontWeight: FontWeight.normal,
-                    ),),
-                onPressed: () => Navigator.pushNamed(context, OrderSuccessScreens),
+                  textStyle: AppFont.medium.copyWith(
+                    fontSize: 15,
+                    fontWeight: FontWeight.normal,
+                  ),
+                ),
+                onPressed: () {
+                  Navigator.pushNamed(context, OrderSuccessScreens);
+                },
                 child: Text('Submit order'.toUpperCase()),
               ),
             ),

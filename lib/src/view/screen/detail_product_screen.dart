@@ -279,7 +279,7 @@ class _DetailProductScreenState extends State<DetailProductScreen> {
       builder: (_) {
         ProductViewModel productViewModel = ProductViewModel(); // cre
         ProductViewModel productViewModel2 =
-            ProductViewModel(); // cre// ate instance provider
+            ProductViewModel(); // create instance provider
         String select = '';
         Inventory? a;
         return StatefulBuilder(

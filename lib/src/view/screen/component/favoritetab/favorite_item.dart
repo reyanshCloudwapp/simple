@@ -70,28 +70,29 @@ class FavoriteItem extends StatelessWidget {
                     color: Colors.white,
                   )),
               Positioned(
-                  right: 0,
-                  bottom: 0,
-                  width: 40,
-                  height: 40,
-                  child: Container(
-                      padding: EdgeInsets.all(9),
-                      decoration: BoxDecoration(
-                        color: AppColors.primaryColorRed,
-                        shape: BoxShape.circle,
-                        boxShadow: [
-                          BoxShadow(
-                              color: Colors.grey.withOpacity(.2),
-                              offset: Offset(1, 1),
-                              spreadRadius: 3,
-                              blurRadius: 3),
-                        ],
-                      ),
-                      child: SvgPicture.asset(
-                        'assets/image/bag_active.svg',
-                        fit: BoxFit.scaleDown,
-                        color: Colors.white,
-                      ))),
+                right: 0,
+                bottom: 0,
+                width: 40,
+                height: 40,
+                child: Container(
+                  padding: EdgeInsets.all(9),
+                  decoration: BoxDecoration(
+                    color: AppColors.primaryColorRed,
+                    shape: BoxShape.circle,
+                    boxShadow: [
+                      BoxShadow(
+                          color: Colors.grey.withOpacity(.2),
+                          offset: Offset(1, 1),
+                          spreadRadius: 3,
+                          blurRadius: 3),
+                    ],
+                  ),
+                  child: SvgPicture.asset(
+                    'assets/image/bag_active.svg',
+                    fit: BoxFit.scaleDown,
+                  ),
+                ),
+              ),
             ],
           ),
           Row(

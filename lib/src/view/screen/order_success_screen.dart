@@ -3,13 +3,15 @@ import 'package:simple/src/const/app_font.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../../router/router_path.dart';
+
 class OrderSuccessScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 15,vertical: 50),
+        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 50),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
@@ -29,18 +31,24 @@ class OrderSuccessScreen extends StatelessWidget {
                   SizedBox(
                     height: 25,
                   ),
-                  Text("Success!",style: AppFont.bold.copyWith(
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold,
-                  ),),
+                  Text(
+                    "Success!",
+                    style: AppFont.bold.copyWith(
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                   SizedBox(
                     height: 15,
                   ),
-                  Text("Your order will be delivered soon.\n Thank you for choosing our app!!",style: AppFont.regular.copyWith(
-                    fontSize: 15,
-                    height: 1.3,
-                    fontWeight: FontWeight.normal,
-                  ),),
+                  Text(
+                    "Your order will be delivered soon.\n Thank you for choosing our app!!",
+                    style: AppFont.regular.copyWith(
+                      fontSize: 15,
+                      height: 1.3,
+                      fontWeight: FontWeight.normal,
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -56,8 +64,15 @@ class OrderSuccessScreen extends StatelessWidget {
                   textStyle: AppFont.medium.copyWith(
                     fontSize: 15,
                     fontWeight: FontWeight.normal,
-                  ),),
-                onPressed: () {},
+                  ),
+                ),
+                onPressed: () {
+                  Navigator.pushNamedAndRemoveUntil(
+                    context,
+                    DashBoardScreens,
+                    (_) => false,
+                  );
+                },
                 child: Text('Continue shopping'.toUpperCase()),
               ),
             ),
